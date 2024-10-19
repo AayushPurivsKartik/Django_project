@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{% static 'myfirst.css' %}">
+<body>
+
+{% for x in fruits %}
+  <li>{{ x }}</li>
+{% endfor %}
+
+{% with firstname="Tobias" %}
+<h1>Hello {{ firstname }}, how are you?</h1>
+{% endwith %}
+{%for x in k%}
+<p>{{x.firstname}}</p>
+{%endfor%}
+
+{% if greeting%}
+<h1>Hello</h1>
+{% elif greeting == 2 %}
+<h1>Welcome</h1>
+{% else %}
+<h1>Goodbye</h1>
+{% endif %}
+
+<hr>
+{% if x is y %}
+  <h1>YES</h1>
+{% else %}
+  <h1>NO</h1>
+{% endif %}
+<p>In views.py you can see what the fruits variable looks like.</p>
+
+</body>
+</html>
